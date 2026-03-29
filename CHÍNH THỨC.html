@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nét Đẹp Việt Nam</title>
+    <style>
+        
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f9f9f9; color: #333; }
+        
+        .navbar { background-color: #0bc0c7; display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-links > li { position: relative; }
+        .nav-links a { display: block; color: white; padding: 18px 25px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
+        .nav-links a:hover { background-color: #b71c1c; }
+
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-top: 3px solid #d32f2f; }
+        .dropdown-content a { color: #333; padding: 12px 16px; font-weight: normal; border-bottom: 1px solid #eee; }
+        .dropdown-content a:hover { background-color: #f1f1f1; color: #d32f2f; }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); min-height: 450px; }
+        .page-content { display: none; animation: fadeIn 0.5s ease; }
+        .active-page { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        h1 { color: #d32f2f; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .form-group { background: #fff5f5; padding: 25px; border-radius: 8px; border: 1px solid #ffcccc; margin-top: 20px; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
+        button { background: #d32f2f; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 16px; transition: 0.3s; }
+        button:hover { background: #b71c1c; }
+        button:disabled { background: #ccc; }
+
+        .contact-info { line-height: 2; font-size: 18px; margin-top: 20px; }
+        .contact-info b { color: #d32f2f; }
+        
+        .bo-goc-anh {width: 800px; height: 350px; ;border-radius: 30px; display: block;margin: 20px auto;box-shadow: 0 4px 8px rgba(0,0,0,0.2);}
+        .li-do-chon{font-size: larger; color: #d32f2f; text-align: center; }
+        .font-gioi-thieu{font-family: Arial; font-size: 20px; color: #c40606;}
+        .font-de-muc-lon{font-family: Arial; font-size: 20px; color: #201ab6;}
+        .font-de-muc-nho{font-family: Arial; font-size: 20px; color: #0ac710;}
+        .font-noi-dung{font-family: Arial; font-size: 20px; color: #050505;}
+        .font-chu-thich{text-align: right;}
+        .font-dymamic{background: linear-gradient(to right, #f321d7, #ffec61, #2196f3, #f321d7);background-size: 200% auto;-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: dynamic-color 5s linear infinite; text-align: center; font-size: 40px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ; font-weight: 900;}
+        @keyframes dynamic-color {to {background-position: 200% center;}}
+
+
+   </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a onclick="showPage('home')">Trang Chủ</a></li>
+            <li><a onclick="showPage('about')">Giới Thiệu</a></li>
+            <li class="dropdown">
+                <a>Những Câu Chuyện ▼</a>
+                <div class="dropdown-content">
+                    <a onclick="showPage('net-dep')">Nét Đẹp Quanh Ta</a>
+                    <a onclick="showPage('rieng-biet')">Nét Đẹp Riêng Biệt</a>
+                    <a onclick="showPage('cam-nghi')">Góc Cảm Nghĩ</a>
+                </div>
+            </li>
+            <li><a onclick="showPage('contact')">Liên Hệ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="page-content active-page">
+            <h1>Nét Đẹp Việt Nam</h1>
+            <img src="https://nld.mediacdn.vn/291774122806476800/2021/6/26/ngay-mua-cay-ma-1624699902954174349020.jpg" alt="Ảnh ngày mùa" class="bo-goc-anh">
+            <div style="background: #f0f0f0; height: 250px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; margin-top: 20px;"> 
+                  <p class="li-do-chon"><strong> Trong suốt tiến trình lịch sử, lao động không chỉ là phương thức sinh tồn mà còn là biểu tượng cao đẹp cho ý chí và nghị lực của con người Việt Nam. Chúng tôi thực hiện bài viết này nhằm tôn vinh những giá trị nhân văn sâu sắc cùng sự đóng góp thầm lặng của người lao động trong công cuộc xây dựng và phát triển đất nước. Thông qua từng góc nhìn, chúng tôi mong muốn khơi dậy niềm tự hào và sự trân trọng dành cho những nét đẹp lao động bình dị mà vô cùng cao quý ấy. </strong></p>
+            </div>
+        </div>
+
+        <div id="about" class="page-content">
+            <h1>Giới Thiệu Dự Án</h1>
+            <p class="font-de-muc-lon">Dự án "Nét Đẹp Việt Nam" là một nơi những nét đẹp lao động của người Việt Nam thể hiện qua nhiều phẩm chất đáng quý được hình thành từ lịch sử, văn hóa và hoàn cảnh sống. Một số nét đẹp tiêu biểu gồm:</p>
+            <p class="font-de-muc-nho">1. Cần cù, chịu khó 🌾</p>
+            <p class="font-noi-dung">Người Việt Nam nổi tiếng với đức tính chăm chỉ trong lao động. Dù trong nông nghiệp, công nghiệp hay các ngành nghề khác, họ luôn nỗ lực làm việc để cải thiện cuộc sống. Hình ảnh người nông dân “bán mặt cho đất, bán lưng cho trời” là biểu tượng rõ nét cho tinh thần này.</p>
+            <p class="font-de-muc-nho">2. Sáng tạo và linh hoạt 💡</p>
+            <p class="font-noi-dung">Trong quá trình lao động, người Việt thường tìm ra nhiều cách làm mới, tận dụng điều kiện sẵn có để đạt hiệu quả cao hơn. Sự khéo léo và sáng tạo giúp họ thích nghi với nhiều hoàn cảnh khác nhau.</p>
+            <p class="font-de-muc-nho">3. Tinh thần đoàn kết, giúp đỡ nhau 🤝</p>
+            <p class="font-noi-dung">Trong lao động tập thể như làm ruộng, xây dựng hay sản xuất, người Việt luôn có tinh thần hợp tác, tương trợ lẫn nhau. Điều này thể hiện rõ trong các hoạt động như “đổi công”, cùng nhau làm việc để đạt kết quả tốt hơn.</p>
+            <p class="font-de-muc-nho">4. Kiên trì, bền bỉ 💪</p>
+            <p class="font-noi-dung">Dù gặp khó khăn, thiên tai hay thử thách, người lao động Việt Nam vẫn kiên trì vượt qua. Chính sự bền bỉ này đã giúp đất nước phát triển qua nhiều giai đoạn khó khăn.</p>
+            <p class="font-de-muc-nho">5. Yêu lao động và trân trọng thành quả 🌱</p>
+            <p class="font-noi-dung">Người Việt luôn coi lao động là giá trị quan trọng của cuộc sống. Thành quả lao động không chỉ mang ý nghĩa vật chất mà còn là niềm tự hào và động lực để tiếp tục cố gắng.</p>
+        </div>
+
+        <div id="net-dep" class="page-content">
+            <h1>Nét Đẹp Quanh Ta</h1>
+            <p class="font-de-muc-lon">Nơi ghi lại những khoảnh khắc tử tế, những hành động đẹp mà chúng ta vô tình bắt gặp trong cuộc sống thường nhật.</p>
+            <p class="font-de-muc-nho">Những người công nhân lao công. Họ giữ gìn môi trường sạch đẹp, góp phần bảo vệ sức khỏe cộng đồng và tạo nên diện mạo văn minh cho đô thị.</p>
+            <p class="font-noi-dung">Người làm nghề này thể hiện đức tính hy sinh và tinh thần trách nhiệm cao. Công việc thường diễn ra vào ban đêm hoặc sáng sớm, ít được chú ý nhưng lại vô cùng vất vả. Họ còn mang vẻ đẹp của sự nhẫn nại, khiêm nhường, âm thầm cống hiến mà không đòi hỏi sự tôn vinh.</p>
+            <p class="font-noi-dung"> Trong lúc mọi người đón Tết và bắn pháo hoa, nhiều công nhân vệ sinh môi trường vẫn làm việc suốt đêm để dọn rác trên các tuyến phố. Nhờ họ mà sáng mùng 1, các con đường trở nên sạch sẽ.</p>
+            <p class="font-noi-dung">→ Nhiều bài báo đã ca ngợi đây là sự thầm lặng nhưng rất đáng trân trọng của người lao động.</p>
+            <p class="font-noi-dung">Hình ảnh những cô lao công hoạt động:</p>
+            <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/2/11/879885/Tet-6.JPG" alt="Ảnh lao công" class="bo-goc-anh">
+            <img src="https://nguoiduatin.mediacdn.vn/media/nguyen-phi-long/2022/02/01/61.jpg" alt="Ảnh lao công" class="bo-goc-anh">
+            <p class="font-chu-thich">báo lao động-người đưa tin</p>
+            <p class="font-noi-dung">Hơn nữa với những ngành nghề thu gom phế liệu lại càng quan trọng với đời sống đô thị</p>
+            <p class="font-noi-dung">Người thu gom phế liệu góp phần tái chế rác thải, giảm ô nhiễm môi trường và tiết kiệm tài nguyên. Họ chính là một mắt xích quan trọng trong việc xây dựng lối sống xanh, bảo vệ môi trường.</p>
+            <p class="font-noi-dung">Họ mang vẻ đẹp của sự chịu khó, bền bỉ và nghị lực vươn lên. Công việc vất vả, thu nhập không cao, lại phải đi khắp nơi, nhưng họ vẫn kiên trì mưu sinh. Bên cạnh đó là đức tính tiết kiệm, trân trọng giá trị của lao động, biến những thứ tưởng chừng bỏ đi thành thứ có ích. Ở họ còn toát lên sự lạc quan và ý chí sống mạnh mẽ dù hoàn cảnh còn nhiều khó khăn.</p>
+            <img src="https://nads.1cdn.vn/2023/05/30/350345090_1008495073761028_6817755143219713475_n.jpeg" alt="Ảnh ngày mùa" class="bo-goc-anh">
+            <img src="https://thumuaphelieu12h.vn/templates/pictures/content/thu-gom-phe-lieu.jpg" alt="Ảnh ngày mùa" class="bo-goc-anh">
+            <p class="font-chu-thich">thu mua phế liệu 12h</p>
+        </div>
+
+        <div id="rieng-biet" class="page-content">
+            <h1>Nét Đẹp Riêng Biệt</h1>
+            <p class="font-gioi-thieu">Tinh hoa văn hóa và phẩm giá của lao động Việt Nam.</p>
+            <p class="font-de-muc-lon">1. Nghề ngư dân (đánh bắt hải sản): Ngư dân là những người gắn bó với biển cả, góp phần quan trọng trong việc cung cấp nguồn thực phẩm cho xã hội và bảo vệ chủ quyền biển đảo.</p>
+            <p class="font-de-muc-nho">Tầm quan trọng:</p>
+            <p class="font-noi-dung">Họ mang lại nguồn hải sản dồi dào, phục vụ đời sống và xuất khẩu. Đồng thời, sự hiện diện của ngư dân trên biển còn góp phần khẳng định và bảo vệ lãnh thổ quốc gia.</p>
+            <img src="https://vcdn1-dulich.vnecdn.net/2021/05/17/heart-of-the-sea-1621226995-1621227016.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=fcaMWkAi9Za9Mrht3A2rJw" alt="Ảnh chai" class="bo-goc-anh">
+            <p class="font-chu-thich">du lich</p>
+            <p class="font-de-muc-nho">Vẻ đẹp lao động:</p>
+            <p class="font-noi-dung">Ngư dân mang vẻ đẹp của lòng dũng cảm và ý chí kiên cường. Họ phải đối mặt với sóng to, gió lớn, thậm chí hiểm nguy ngoài khơi xa. Bên cạnh đó là tinh thần lạc quan, yêu đời, luôn cất tiếng hát giữa biển khơi, biến lao động vất vả thành niềm vui sống.</p>
+            <p class="font-de-muc-lon">3. Nghề làm chiếu-nghề thủ công lâu đời, gắn liền với văn hóa dân tộc Việt Nam.</p>
+            <p class="font-de-muc-nho">Tầm quan trọng:</p>
+            <p class="font-noi-dung">Nghề làm chiếu góp phần giữ gìn bản sắc văn hóa, tạo việc làm cho người dân nông thôn và phát triển kinh tế làng nghề.</p>
+            <img src="https://dantocmiennui-media.baotintuc.vn/images/734510f7f3a28016f35b8102dc420f34a2eb6ac939a936a3fd2f4d0743d008687a36a638131089664cf45a2859fe2a70bbba18706b82faaf2e9300fb4e365d806578a529f2d9b948c42081322b6dfea530695f7d8382c04ea756267aab22eb1c8832a4f7a0a320d7be0f5c67c035644b581ab702b3b796bc2f91c65e5bfd97ab782a4ed8b6c0b8742c9b8b01652b978f/potal-cong-bo-di-san-van-hoa-phi-vat-the-quoc-gia-nghe-lam-chieu-ca-hom-cua-dong-bao-khmer-tra-vinh-7964531.jpg" alt="Ảnh làm chiếu" class="bo-goc-anh">
+            <p class="font-chu-thich">báo tin tức</p>
+            <p class="font-de-muc-nho">Vẻ đẹp lao động:</p>
+            <p class="font-noi-dung">Người thợ dệt chiếu thể hiện sự khéo léo, tỉ mỉ và kiên trì. Từng sợi cói, từng đường dệt đều cần sự chăm chút cẩn thận. Ngoài ra còn là tình yêu nghề và sự gắn bó với truyền thống, giúp gìn giữ những giá trị xưa trong đời sống hiện đại.</p>
+        </div>
+        <div id="cam-nghi" class="page-content">
+            <h1>Góc Cảm Nghĩ</h1>
+            <p class="font-noi-dung">Như vậy, nét đẹp lao động không chỉ nằm ở thành quả tạo ra mà còn tỏa sáng trong tinh thần trách nhiệm, sự kiên trì và niềm tự hào của mỗi con người với công việc của mình. Lao động giúp con người khẳng định giá trị bản thân, góp phần xây dựng xã hội ngày càng phát triển và văn minh hơn. Từ đó có thể thấy, vẻ đẹp của con người không phụ thuộc vào nghề nghiệp cao thấp mà được thể hiện qua thái độ sống và cách họ cống hiến cho cộng đồng. Chính vì vậy, bất cứ ngành nghề nào cũng đều có ý nghĩa riêng, đều đáng trân trọng và cần được tôn vinh, bởi tất cả cùng góp phần làm nên sự vận hành hài hòa và tiến bộ của xã hội.</p>
+            <p class="font-dymamic"><strong> Hãy chia sẻ cảm nhận của bạn để cùng chúng mình lan tỏa những điều tích cực nhé!!!</strong></p>
+            <div class="form-group">
+                <input type="text" id="userName" placeholder="Tên của bạn...">
+                <textarea id="userStory" rows="5" placeholder="Viết cảm nhận của bạn tại đây..."></textarea>
+                <button id="submitBtn" onclick="saveStory()">Gửi Cảm Nghĩ</button>
+            </div>
+        </div>
+
+        <div id="contact" class="page-content">
+            <h1>12C7_THPT Trường Chinh_2025-2026_Học Sinh Thực Hiện:</h1>
+            <div class="contact-info">
+                <p>📍 <b>TEAM LEADER: </b>Nguyễn Võ Gia Minh</p>
+                <p>📧 <b>PROGRAMMER: </b>Đinh Nguyễn Diệp Linh & Phạm Đức Tài</p>
+                <p>🌐 <b>CONTENT: </b>Phan Dương Nhật Quang & Ngô Minh Nhật</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzeDtKgFes4wjqc9eBkcPMQX4kRT-47c0Vg_bdClPorBBcSiAcTtjmXAP7GZRdEvYi_vQ/exec'; 
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(pageId).classList.add('active-page');
+            window.scrollTo(0, 0);
+        }
+
+        function saveStory() {
+            const name = document.getElementById('userName').value;
+            const story = document.getElementById('userStory').value;
+            const btn = document.getElementById('submitBtn');
+
+            if (!name || !story) return alert("Bạn vui lòng điền đủ Tên và Cảm nghĩ nhé!");
+
+            btn.disabled = true;
+            btn.innerHTML = "Đang gửi cảm nhận...";
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify({ name: name, story: story })
+            })
+            .then(() => {
+                alert("Tuyệt vời! Cảm nghĩ của bạn đã được gửi về hệ thống.");
+                document.getElementById('userName').value = "";
+                document.getElementById('userStory').value = "";
+            })
+            .catch(() => alert("Rất tiếc, đã có lỗi xảy ra. Bạn vui lòng thử lại nhé!"))
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = "Gửi Cảm Nghĩ";
+            });
+        }
+    </script>
+</body>
+</html>
